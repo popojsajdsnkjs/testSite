@@ -1,13 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 *{
     margin: 0;
+    box-sizing:border-box;
+    font-family: "Balsamiq Sans", serif;
+}
+
+:root{
+    --white-75-o: rgba(255, 255, 255, 0.75);
+}
+
+body{
+    background-color: Thistle;
 }
 
 header{
     min-height: 200px;
-    max-height: 250px;
+    background-image: linear-gradient(Violet,MediumOrchid);
 }
 #site-name{
+    min-height: 100px;
     height: 50%;
-    color: black;
+    color: white;
     text-align: center;
+    line-height: 100px;
+}
+
+#quick-select{
+    min-height: 100px;
+}
+
+#quick-select a{
+    padding: 0px 10px 0px 10px;
+    margin-top: 20px;
+    margin: 20px 10px 0px 10px;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    color: var(--white-75-o);
+    line-height: 60px;
+    min-width: 100px;
+    min-height: 60px;
+    border: 5px solid var(--white-75-o);
+    border-radius: 20px;
+    transition: 250ms;
+}
+#quick-select a:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: white;
+    color: white;
+
 }
