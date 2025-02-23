@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+}
+
+header{
+    min-height: 200px;
+    max-height: 250px;
+}
+#site-name{
+    height: 50%;
+    color: black;
+    text-align: center;
+}
