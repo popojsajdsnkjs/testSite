@@ -6,6 +6,11 @@
     transition: 250ms;
 }
 
+html{
+    min-width: 1000px;
+    min-height: 500px;
+}
+
 :root{
     --white-75-o: rgba(255, 255, 255, 0.75);
 }
