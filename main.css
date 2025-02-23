@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing:border-box;
     font-family: "Balsamiq Sans", serif;
+    transition: 250ms;
 }
 
 :root{
@@ -11,6 +12,7 @@
 
 body{
     background-color: Thistle;
+    height: 100%;
 }
 
 header{
@@ -42,11 +44,31 @@ header{
     min-height: 60px;
     border: 5px solid var(--white-75-o);
     border-radius: 20px;
-    transition: 250ms;
 }
 #quick-select a:hover{
     background-color: rgba(255, 255, 255, 0.25);
     border-color: white;
     color: white;
 
+}
+
+#content{
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 600px;
+    max-width: 600px;
+    min-height: calc(100vh - 200px);
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 auto;
+}
+
+#content a{
+    text-decoration: none;
+    color: magenta;
+}
+
+#content a:hover{
+    text-decoration: none;
+    color: mediumorchid;
 }
