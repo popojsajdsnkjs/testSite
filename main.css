@@ -80,3 +80,23 @@ header{
     text-decoration: none;
     color: mediumorchid;
 }
+
+.text-center{
+    text-align: center;
+}
+
+.button-link{
+    padding: 15px;
+    background-color: magenta;
+    border: 5px solid #e000e0;
+    border-radius: 20px;
+    color: whitesmoke !important;
+    text-transform: uppercase;
+}
+
+.button-link:hover{
+    background-color: #ff55ff;
+    border-color: #ff22ff;
+    color: white;
+    letter-spacing: 1px;
+}
