@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    margin: 0;
+    box-sizing:border-box;
+    font-family: "nunito";
+    transition: 250ms;
+}
+:root{
+    --poker-green: #1e805e;
+    --poker-yellow-beige: #f5c67a;
+    --poker-beige: #d4a6a1;
+    --poker-red: #ff4d3d;
+    --poker-gold: #fec94d;
+
+    --white-15-o: rgba(255, 255, 255, 0.15);
+    --white-20-o: rgba(255, 255, 255, 0.2);
+    --white-25-o: rgba(255, 255, 255, 0.25);
+    --white-40-o: rgba(255, 255, 255, 0.40);
+}
+html{
+    min-width: 1000px;
+    min-height: 500px;
+}
+body{
+    min-height: 100%;
+}
+
+header{
+    background-color: var(--poker-red);
+}
+
+header *{
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+header h1{
+    font-size: 50px;
+}
+header a{
+    padding: 11.5px;
+    font-size: 17px;
+    font-weight: 700;
+    background-color: var(--white-15-o);
+    border-radius: 20px;
+    border: 5px solid var(--white-20-o);
+}
+
+header a:hover{
+    background-color: var(--white-25-o);
+    border-color: var(--white-40-o);
+    letter-spacing: 1px;
+}
+#second-header-part{
+    padding: 10px;
+    background-color: var(--white-15-o);
+}
