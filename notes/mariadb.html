@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="note-style.css">
+    <title>MariaDB</title>
+</head>
+<body>
+    <header><a href=".\notes">Powrót</a></header>
+    <div id="content">
+        <section>
+            <h2>Słownik</h2>
+            <ul>
+                <li>NOW() - jako timestamp daje teraźniejszą date</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Syntax</h2>
+            <ul>
+                <li>
+                    <b>INSERT</b>
+                    <br>
+                    INSERT INTO <i>nazwa tabeli</i> ( <i>nazwa kolumny</i> , <i>nazwa kolumny</i> ,...)
+                    <br>
+                    VALUES ( <i>dane do kolmny</i> )
+                </li>
+                <li>
+                    <b>CREATE TABLE</b>
+                    <br>
+                    CREATE TABLE <i>nazwa tabeli</i> (
+                        <i>nazwa kolumny</i> <i>typ danych</i> <i>dodatkowe szczegóły takie jak NOT NULL, AUTO_INCREMENT etc. <span id="important">odzielone spacją</span></i>
+                    )
+                    <br>
+                    <section>
+                        <h2 style="font-size:medium;">Argumenty do kolumn <span id="important">(można użyc ich w create i alter table)</span></h2>
+                        <ul>
+                            <li>AUTO_INCREMENT - auto numerowanie</li>
+                            <li>NOT NULL - nie NULL</li>
+                            <li>PRIMARY KEY - klucz podstawowy</li>
+                            <li>FOREIGN KEY - klucz obcy, do relacji<br>
+                                REFERENCES - do relacji<br>
+                            </li>
+                            <li>UNIQUE - dane się nie powtórzą w kolumnie</li>
+                            <li>DEFAULT - domyślna wartość dla kolumny</li>
+                        </ul>
+                    </section>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>ALTER TABLE - modyfikowanie tabeli</h2>
+            <ul>
+                <li><b>Dodanie nowej kolumny</b><br>
+                    ALTER TABLE <i>nazwa tabeli</i> ADD COLUMN <i>nazwa kolumny</i> <i>typ danych</i>;
+                </li>
+                <li><b>Usunięcie kolumny</b><br>
+                    ALTER TABLE <i>nazwa tabeli</i> DROP COLUMN <i>nazwa kolumny</i>;
+                </li>
+                <li><b>Zmiana typu danych kolumny</b><br>
+                    ALTER TABLE <i>nazwa tabeli</i> MODIFY COLUMN <i>nazwa kolumny</i> <i>nowy typ</i>;
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>SELECT</h2>
+            <ul>
+                <li><b>Filtrowanie danych <span id="pop">WHERE</span></b><br>
+                    SELECT * FROM <i>nazwa_tabeli</i> WHERE <i>kolumna</i> = '<i>wartość</i>';
+                </li>
+                <li><b>Sortowanie <span id="pop">ORDER BY</span></b><br>
+                    SELECT * FROM <i>nazwa_tabeli</i> ORDER BY <i>kolumna</i> ASC/DESC;
+                </li>
+                <li><b>Ograniczenie liczby wyników <span id="pop">LIMIT</span></b><br>
+                    SELECT * FROM <i>nazwa_tabeli</i> LIMIT 2; 
+                </li>
+            </ul>
+        </section>
+        <section id="important-section">
+            <h2>Tworzenie kopii zapasowej <span id="pop">DUMP</span></h2>
+            <p id="important">Poza mysql, w czystym cmd (folder c:/xampp/mysql/bin)</p>
+            <ul>
+                <li><b>Eksport bazy danych do pliku</b><br>
+                    mysqldump -u <i>użytkownik</i> -p <i>nazwa_bazy</i> > <i>backup.sql</i>
+                </li>
+                <li><b>Import bazy danych z pliku</b><br>
+                    mysql -u <i>użytkownik</i> -p <i>nazwa_bazy</i> < <i>backup.sql</i>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
